@@ -17,15 +17,13 @@ function whileLoop(number){
   return 'done'
 }
 
-
-function doWhileLoop(array){
-  function maybeTrue(){
-    return Math.random() >= 0.5
-  }
-  do {
-    array.pop()
-  } while (maybeTrue() && array.Length > 0);
-  return array
+function maybeTrue(){
+  return Math.random() >= 0.5
 }
 
-console.log(doWhileLoop(1,2,3,4,5))
+function doWhileLoop(array){
+  do {
+    array.pop()
+  } while (maybeTrue() && array.Length > 0)
+  return array
+}
